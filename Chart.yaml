@@ -1,0 +1,12 @@
+apiVersion: v2
+name: yogstation-harbor
+description: Yogstation Harbor Deployment
+
+type: application
+
+version: 0.0.1
+
+dependencies:
+  - name: harbor
+    version: 1.8.1
+    repository: https://helm.goharbor.io
