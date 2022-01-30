@@ -12,3 +12,7 @@ patches:
     target:
       kind: Deployment
       labelSelector: "component=core"
+  - path: kustomization/patch-core-config.yaml
+    target:
+      kind: Deployment
+      labelSelector: "component=core"

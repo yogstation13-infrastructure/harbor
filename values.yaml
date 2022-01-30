@@ -35,3 +35,11 @@ harbor:
 
 storage:
   location: /var/lib/yogstation/harbor
+
+email:
+  host: mail.mail
+  port: 465
+  ssl: true
+  from: harbor@yogstation.net
+  user: harbor@yogstation.net
+  password:

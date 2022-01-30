@@ -1,0 +1,12 @@
+{
+  "auth_type": "db_auth",
+  "email_from": "{{ .Values.email.from }}",
+  "email_host": "{{ .Values.email.host }}",
+  "email_username": "{{ .Values.email.user }}",
+  "email_password": "{{ .Values.email.password }}",
+  "email_port": {{ .Values.email.port }},
+  "email_ssl": {{ .Values.email.ssl }},
+  "project_creation_restriction": "everyone",
+  "self_registration": false,
+}
+
