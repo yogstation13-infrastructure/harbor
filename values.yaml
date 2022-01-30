@@ -10,6 +10,7 @@ harbor:
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt
         nginx.ingress.kubernetes.io/auth-tls-verify-client: "off"
+        nginx.ingress.kubernetes.io/auth-tls-secret: harbor/cloudflare-dummy-cert
 
   externalURL: https://harbor.yogstation.net
 
