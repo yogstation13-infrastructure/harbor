@@ -7,6 +7,9 @@ spec:
     spec:
       containers:
         - name: core
-          envFrom:
-            - secretRef:
-                name: harbor-jsonconfig
+          env:
+            - name: CONFIG_OVERWRITE_JSON
+              valueFrom:
+                secretKeyRef:
+                  key: CONFIG_OVERWRITE_JSON
+                  name: harbor-jsonconfig
