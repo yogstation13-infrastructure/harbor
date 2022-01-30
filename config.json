@@ -1,5 +1,5 @@
 {
-  "auth_type": "db_auth",
+  "auth_mode": "db_auth",
   "email_from": "{{ .Values.email.from }}",
   "email_host": "{{ .Values.email.host }}",
   "email_username": "{{ .Values.email.user }}",
