@@ -1,0 +1,42 @@
+harbor:
+  expose:
+    tls:
+      certSource: secret
+      secret:
+        secretName: harbor-cert
+    ingress:
+      hosts:
+        core: harbor.yogstation.net
+      annotations:
+        cert-manager.io/cluster-issuer: letsencrypt
+
+  externalURL: https://harbor.yogstation.net
+
+  persistence:
+    persistentVolumeClaim:
+      chartmuseum:
+        existingClaim: harbor-pvc
+        subPath: chartmuseum
+      jobservice:
+        existingClaim: harbor-pvc
+        subPath: jobservice
+      redis:
+        existingClaim: harbor-pvc
+        subPath: redis
+      registry:
+        existingClaim: harbor-pvc
+        subPath: registry
+      trivy:
+        existingClaim: harbor-pvc
+        subPath: trivy
+
+  notary:
+    enabled: false
+
+  database:
+    type: external
+    external:
+      host: "postgres.postgres"
+
+storage:
+  location: /var/lib/yogstation/harbor
