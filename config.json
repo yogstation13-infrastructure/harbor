@@ -7,6 +7,6 @@
   "email_port": {{ .Values.email.port }},
   "email_ssl": {{ .Values.email.ssl }},
   "project_creation_restriction": "everyone",
-  "self_registration": false,
+  "self_registration": false
 }
 
