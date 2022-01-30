@@ -8,5 +8,5 @@ spec:
       containers:
         - name: core
           envFrom:
-            - configMapRef:
+            - secretRef:
                 name: harbor-jsonconfig
