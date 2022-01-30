@@ -9,6 +9,7 @@ harbor:
         core: harbor.yogstation.net
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt
+        nginx.ingress.kubernetes.io/auth-tls-verify-client: "off"
 
   externalURL: https://harbor.yogstation.net
 
