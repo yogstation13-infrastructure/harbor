@@ -15,20 +15,15 @@ harbor:
   persistence:
     persistentVolumeClaim:
       chartmuseum:
-        existingClaim: harbor-pvc
-        subPath: chartmuseum
+        existingClaim: harbor-pvc-chartmuseum
       jobservice:
-        existingClaim: harbor-pvc
-        subPath: jobservice
+        existingClaim: harbor-pvc-jobservice
       redis:
-        existingClaim: harbor-pvc
-        subPath: redis
+        existingClaim: harbor-pvc-redis
       registry:
-        existingClaim: harbor-pvc
-        subPath: registry
+        existingClaim: harbor-pvc-registry
       trivy:
-        existingClaim: harbor-pvc
-        subPath: trivy
+        existingClaim: harbor-pvc-trivy
 
   notary:
     enabled: false

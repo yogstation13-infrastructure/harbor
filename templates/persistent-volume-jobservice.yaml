@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: harbor-pv
+  name: harbor-pv-jobservice
 spec:
   accessModes:
     - ReadWriteMany
   capacity:
     storage: 20Gi
   hostPath:
-    path: {{ .Values.storage.location | quote }}
+    path: {{ (printf "%s/jobservice" .Values.storage.location) | quote }}
     type: ""
   persistentVolumeReclaimPolicy: Retain
   volumeMode: Filesystem
