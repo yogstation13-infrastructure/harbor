@@ -39,7 +39,7 @@ storage:
   location: /var/lib/yogstation/harbor
 
 email:
-  host: mail.mail
+  host: mail.yogstation.net
   port: 465
   ssl: true
   from: harbor@yogstation.net
