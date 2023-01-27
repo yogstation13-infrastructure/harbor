@@ -9,23 +9,23 @@ harbor:
         core: harbor.yogstation.net
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt
-        nginx.ingress.kubernetes.io/auth-tls-verify-client: "off"
-        nginx.ingress.kubernetes.io/auth-tls-secret: harbor/cloudflare-dummy-cert
+        #nginx.ingress.kubernetes.io/auth-tls-verify-client: "off"
+        #nginx.ingress.kubernetes.io/auth-tls-secret: harbor/cloudflare-dummy-cert
 
   externalURL: https://harbor.yogstation.net
 
   persistence:
     persistentVolumeClaim:
       chartmuseum:
-        existingClaim: harbor-pvc-chartmuseum
+        storageClass: local-path
       jobservice:
-        existingClaim: harbor-pvc-jobservice
+        storageClass: local-path
       redis:
-        existingClaim: harbor-pvc-redis
+        storageClass: local-path
       registry:
-        existingClaim: harbor-pvc-registry
+        storageClass: local-path
       trivy:
-        existingClaim: harbor-pvc-trivy
+        storageClass: local-path
 
   notary:
     enabled: false
